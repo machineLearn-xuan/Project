@@ -57,7 +57,7 @@ https://worldpopulationreview.com/state-rankings/egg-prices-by-state
 -Adjust price accounting for inflation using CPI data
 
 
-80/20 Train/Test Split and Train
+### 80/20 Train/Test Split and Train
 
 
 ### Evaluation:
