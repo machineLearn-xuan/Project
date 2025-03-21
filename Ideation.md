@@ -5,6 +5,7 @@ encode -> normalize -> train -> evaluate
 ### Wildfire Risk Prediction in the US
 
 Data Sources:
+
 https://firms.modaps.eosdis.nasa.gov/
 
 https://www.ncdc.noaa.gov/
@@ -28,6 +29,7 @@ Evaluation:
 ### Inflation Analysis with Egg Price Index in the US
 
 Data Sources:
+
 https://data.bls.gov/timeseries/APU0000708111
 
 https://data.bls.gov/dataViewer/view/timeseries/APU0000708111
