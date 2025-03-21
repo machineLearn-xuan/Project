@@ -1,19 +1,45 @@
 # Milestone 1 - Ideation
+encode -> normalize -> train -> evaluate
 
-[Sketch1]
 ## Concept 1 
-### Demand Forecasting for Rail Services 
-•	Objective: Develop a ML model to forecast demand for train services in different boroughs, helping to allocate trains dynamically; more trains during rush hour, less trains during non-peak hours.
+### Wildfire Risk Prediction in the US
 
-•	Data: Historical ridership data, population growth projections, economic activity data. 
+Data Sources:
+https://firms.modaps.eosdis.nasa.gov/
+https://www.ncdc.noaa.gov/
+https://www.usgs.gov/core-science-systems/national-land-imaging-program/land-cover
 
-•	Approach: Use time-series forecasting models (e.g., Prophet, LSTM?) to predict demand based on historical trends. Ensuring that rail services are scaled dynamically to meet fluid demand, improving system efficiency and reducing station / train carriage overcrowding. 
+Data Processing:
+-Merge datasets on location and date (fire reports + weather)
+-Encode vegetation types and soil moisture levels numerically
+-Normalize temperature, humidity, and wind speed
 
-[Sketch2]
-## Concept 1 
-### Terrain Classification for Rail Route Planning 
-•	Objective: Use ML to classify terrain types (e.g., flat, mountainous, coastal) to assist in rail route planning. 
+80/20 Train/Test Split and Train
 
-•	Data: Satellite imagery, digital elevation models (DEMs), soil type data. 
+Evaluation:
+-Calculate accuracy of risk classification using Precision-Recall scores.
+-Feature weightage (e.g., temperature vs. wind speed).
+-Geo-Heatmaps to visualise high-risk areas.
 
-•	Approach: Apply image classification models (e.g., Convolutional Neural Networks?) to classify terrain types based on satellite imagery and their associated colours and tones and with elevation data. Thereby, identifying the most suitable routes for rail lines to be constructed, avoiding challenging terrain that would increase construction costs. 
+
+## Concept 2
+### Inflation Analysis with Egg Price Index in the US
+
+Data Sources:
+https://data.bls.gov/timeseries/APU0000708111
+https://data.bls.gov/dataViewer/view/timeseries/APU0000708111
+https://fred.stlouisfed.org/series/APU0000708111
+https://tradingeconomics.com/commodity/eggs-us
+https://worldpopulationreview.com/state-rankings/egg-prices-by-state
+
+Data Processing:
+-Aggregate egg prices by state
+-Adjust price accounting for inflation using CPI data
+
+80/20 Train/Test Split and Train
+
+Evaluation:
+-Calculate accuracy using RMSE.
+-Visualize seasonal patterns and inflation impact on prices
+-Predict when current wave of eggflation will end
+
