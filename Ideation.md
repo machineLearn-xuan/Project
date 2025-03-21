@@ -35,26 +35,29 @@ https://www.usgs.gov/core-science-systems/national-land-imaging-program/land-cov
 
 
 ## Concept 2
-### Inflation Analysis with Egg Price Index in the US
+### Fragrance Creation and Ingredient / Perfume Blending
 
 ### Data Sources:
 
-https://data.bls.gov/timeseries/APU0000708111
+https://www.kaggle.com/datasets/kanchana1990/perfume-e-commerce-dataset-2024
 
-https://data.bls.gov/dataViewer/view/timeseries/APU0000708111
+https://www.kaggle.com/datasets/nandini1999/perfume-recommendation-dataset?resource=download
 
-https://fred.stlouisfed.org/series/APU0000708111
+https://www.kaggle.com/code/foolwuilin/scent-notes-for-different-sexual-categories/input
 
-https://tradingeconomics.com/commodity/eggs-us
-
-https://worldpopulationreview.com/state-rankings/egg-prices-by-state
+https://www.kaggle.com/datasets/olgagmiufana1/fragrantica-com-fragrance-dataset
 
 
 ### Data Processing:
+-Merge datasets on perfume name and ingredients and notes
 
--Aggregate egg prices by state
+-Explore collinearity between variables
 
--Adjust price accounting for inflation using CPI data
+-Encode perfume names, ingredients/notes, or gender
+
+-Normalise price, rating, and year
+
+-Create a "blend level" based on ingredient similarity + rating difference
 
 
 ### 80/20 Train/Test Split and Train
@@ -64,7 +67,9 @@ https://worldpopulationreview.com/state-rankings/egg-prices-by-state
 
 -Calculate accuracy using RMSE
 
--Visualize seasonal patterns and inflation impact on prices
+-Visualize as a pair recommendation - choosing 1 perfume will suggest few other perfumes that goes well with it
 
--Predict when current wave of eggflation will end
+-Predict user preference based on notes and fragrances
+
+
 
