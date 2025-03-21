@@ -6,7 +6,9 @@ encode -> normalize -> train -> evaluate
 
 Data Sources:
 https://firms.modaps.eosdis.nasa.gov/
+
 https://www.ncdc.noaa.gov/
+
 https://www.usgs.gov/core-science-systems/national-land-imaging-program/land-cover
 
 Data Processing:
@@ -27,9 +29,13 @@ Evaluation:
 
 Data Sources:
 https://data.bls.gov/timeseries/APU0000708111
+
 https://data.bls.gov/dataViewer/view/timeseries/APU0000708111
+
 https://fred.stlouisfed.org/series/APU0000708111
+
 https://tradingeconomics.com/commodity/eggs-us
+
 https://worldpopulationreview.com/state-rankings/egg-prices-by-state
 
 Data Processing:
