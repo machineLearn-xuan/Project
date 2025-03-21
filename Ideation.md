@@ -4,7 +4,7 @@ encode -> normalize -> train -> evaluate
 ## Concept 1 
 ### Wildfire Risk Prediction in the US
 
-Data Sources:
+### Data Sources:
 
 https://firms.modaps.eosdis.nasa.gov/
 
@@ -13,7 +13,7 @@ https://www.ncdc.noaa.gov/
 https://www.usgs.gov/core-science-systems/national-land-imaging-program/land-cover
 
 
-Data Processing:
+### Data Processing:
 
 -Merge datasets on location and date (fire reports + weather)
 
@@ -22,10 +22,10 @@ Data Processing:
 -Normalize temperature, humidity, and wind speed
 
 
-80/20 Train/Test Split and Train
+### 80/20 Train/Test Split and Train
 
 
-Evaluation:
+### Evaluation:
 
 -Calculate accuracy of risk classification using Precision-Recall scores
 
@@ -37,7 +37,7 @@ Evaluation:
 ## Concept 2
 ### Inflation Analysis with Egg Price Index in the US
 
-Data Sources:
+### Data Sources:
 
 https://data.bls.gov/timeseries/APU0000708111
 
@@ -50,7 +50,7 @@ https://tradingeconomics.com/commodity/eggs-us
 https://worldpopulationreview.com/state-rankings/egg-prices-by-state
 
 
-Data Processing:
+### Data Processing:
 
 -Aggregate egg prices by state
 
@@ -60,7 +60,7 @@ Data Processing:
 80/20 Train/Test Split and Train
 
 
-Evaluation:
+### Evaluation:
 
 -Calculate accuracy using RMSE
 
