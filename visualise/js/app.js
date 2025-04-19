@@ -965,6 +965,8 @@ dashboardTitleContainer.style.margin = "20px";
 const dashboardTitle = document.createElement("h2");
 dashboardTitle.textContent = "Weighing Indexes";
 dashboardTitle.style.fontSize = "18px";
+dashboardTitle.style.marginTop = "0px";
+dashboardTitle.style.marginBottom = "0px";
 dashboardTitle.style.color = "#333";
 
 // title to the container
@@ -2945,419 +2947,419 @@ divider1.style.padding = "0px";
 divider1.style.opacity = "0.8";
 document.body.appendChild(divider1);
 
-// intro dialog window
-window.addEventListener("load", () => {
-  const dialogContainer = document.createElement("div");
-  dialogContainer.style.position = "fixed";
-  dialogContainer.style.top = "0";
-  dialogContainer.style.left = "0";
-  dialogContainer.style.width = "100%";
-  dialogContainer.style.height = "100%";
-  dialogContainer.style.backgroundColor = "rgba(0, 0, 0, 0.7)";
-  dialogContainer.style.zIndex = "2002";
-  dialogContainer.style.display = "flex";
-  dialogContainer.style.justifyContent = "center";
-  dialogContainer.style.alignItems = "center";
-  dialogContainer.style.padding = "20px";
-  dialogContainer.style.boxSizing = "border-box";
-  dialogContainer.style.overflowY = "auto";
+// // intro dialog window
+// window.addEventListener("load", () => {
+//   const dialogContainer = document.createElement("div");
+//   dialogContainer.style.position = "fixed";
+//   dialogContainer.style.top = "0";
+//   dialogContainer.style.left = "0";
+//   dialogContainer.style.width = "100%";
+//   dialogContainer.style.height = "100%";
+//   dialogContainer.style.backgroundColor = "rgba(0, 0, 0, 0.7)";
+//   dialogContainer.style.zIndex = "2002";
+//   dialogContainer.style.display = "flex";
+//   dialogContainer.style.justifyContent = "center";
+//   dialogContainer.style.alignItems = "center";
+//   dialogContainer.style.padding = "20px";
+//   dialogContainer.style.boxSizing = "border-box";
+//   dialogContainer.style.overflowY = "auto";
   
-  // Mobile responsiveness adjustments
-  if (window.innerWidth <= 768) {
-    dialogContainer.style.alignItems = "flex-start";
-    dialogContainer.style.paddingTop = "60px";
-  }
+//   // Mobile responsiveness adjustments
+//   if (window.innerWidth <= 768) {
+//     dialogContainer.style.alignItems = "flex-start";
+//     dialogContainer.style.paddingTop = "60px";
+//   }
   
-  // Update dialog positioning on resize
-  window.addEventListener("resize", () => {
-    if (window.innerWidth <= 768) {
-      dialogContainer.style.transform = "translateX(-50%) scale(0.3)";
-    } else {
-      dialogContainer.style.transform = "translateX(-50%)";
-    }
-  });
+//   // Update dialog positioning on resize
+//   window.addEventListener("resize", () => {
+//     if (window.innerWidth <= 768) {
+//       dialogContainer.style.transform = "translateX(-50%) scale(0.3)";
+//     } else {
+//       dialogContainer.style.transform = "translateX(-50%)";
+//     }
+//   });
 
-  const dialogBox = document.createElement("div");
-  dialogBox.style.backgroundColor = "white";
-  dialogBox.style.padding = "20px";
-  dialogBox.style.opacity = 0.9;
-  dialogBox.style.borderRadius = "10px";
-  dialogBox.style.boxShadow = "0px 4px 10px rgba(0, 0, 0, 0.3)";
-  dialogBox.style.textAlign = "center";
-  dialogBox.style.maxWidth = "520px";
-  dialogBox.style.border = "1px solid white";
-  dialogBox.style.width = "100%"; // Ensure it uses available width
+//   const dialogBox = document.createElement("div");
+//   dialogBox.style.backgroundColor = "white";
+//   dialogBox.style.padding = "20px";
+//   dialogBox.style.opacity = 0.9;
+//   dialogBox.style.borderRadius = "10px";
+//   dialogBox.style.boxShadow = "0px 4px 10px rgba(0, 0, 0, 0.3)";
+//   dialogBox.style.textAlign = "center";
+//   dialogBox.style.maxWidth = "520px";
+//   dialogBox.style.border = "1px solid white";
+//   dialogBox.style.width = "100%"; // Ensure it uses available width
 
-  const dialogTitle = document.createElement("h1");
-  dialogTitle.textContent = "Trains, Lanes, and Data Grains!";
-  dialogTitle.style.marginTop = "10px";
-  dialogTitle.style.marginBottom = "15px";
-  dialogTitle.style.marginLeft = "13px";
-  dialogTitle.style.marginRight = "13px";
-  dialogTitle.style.fontSize = "30px";
-  dialogTitle.style.textAlign = "left";
-  dialogTitle.style.color = "orange";
-  dialogTitle.style.lineHeight = "1.2";
-  dialogTitle.style.fontWeight = "bold";
-  dialogBox.appendChild(dialogTitle);
+//   const dialogTitle = document.createElement("h1");
+//   dialogTitle.textContent = "Trains, Lanes, and Data Grains!";
+//   dialogTitle.style.marginTop = "10px";
+//   dialogTitle.style.marginBottom = "15px";
+//   dialogTitle.style.marginLeft = "13px";
+//   dialogTitle.style.marginRight = "13px";
+//   dialogTitle.style.fontSize = "30px";
+//   dialogTitle.style.textAlign = "left";
+//   dialogTitle.style.color = "orange";
+//   dialogTitle.style.lineHeight = "1.2";
+//   dialogTitle.style.fontWeight = "bold";
+//   dialogBox.appendChild(dialogTitle);
 
-  const dialogsubTitle = document.createElement("h2");
-  dialogsubTitle.textContent = "Mapping Southeast Asia's Future";
-  dialogsubTitle.style.marginBottom = "30px";
-  dialogsubTitle.style.marginLeft = "13px";
-  dialogsubTitle.style.textAlign = "left";
-  dialogsubTitle.style.fontSize = "16px";
-  dialogsubTitle.style.color = "grey";
-  dialogBox.appendChild(dialogsubTitle);
+//   const dialogsubTitle = document.createElement("h2");
+//   dialogsubTitle.textContent = "Mapping Southeast Asia's Future";
+//   dialogsubTitle.style.marginBottom = "30px";
+//   dialogsubTitle.style.marginLeft = "13px";
+//   dialogsubTitle.style.textAlign = "left";
+//   dialogsubTitle.style.fontSize = "16px";
+//   dialogsubTitle.style.color = "grey";
+//   dialogBox.appendChild(dialogsubTitle);
 
-  const dialogMessage = document.createElement("p");
-  dialogMessage.innerHTML =
-    "Welcome to the Rail Feasibility Mapper!<br>This tool allows you to explore and evaluate rail feasibility based on various indexes and criteria specific to Southeast Asia.<br><br>Using the tools provided, you can pinpoint an origin-destination pair, calculate said routes, toggle layer visibility, control level of influence of the indexes and analyze the feasibility of your connectivity project in the final result.<br><br>Let's map the future of Southeast Asia together!";
-  dialogMessage.style.fontSize = "14px";
-  dialogMessage.style.color = "black";
-  dialogMessage.style.marginLeft = "13px";
-  dialogMessage.style.marginRight = "13px";
-  dialogMessage.style.lineHeight = "1.5";
-  dialogMessage.style.textAlign = "justify";
-  dialogMessage.style.marginBottom = "20px";
-  dialogBox.appendChild(dialogMessage);
+//   const dialogMessage = document.createElement("p");
+//   dialogMessage.innerHTML =
+//     "Welcome to the Rail Feasibility Mapper!<br>This tool allows you to explore and evaluate rail feasibility based on various indexes and criteria specific to Southeast Asia.<br><br>Using the tools provided, you can pinpoint an origin-destination pair, calculate said routes, toggle layer visibility, control level of influence of the indexes and analyze the feasibility of your connectivity project in the final result.<br><br>Let's map the future of Southeast Asia together!";
+//   dialogMessage.style.fontSize = "14px";
+//   dialogMessage.style.color = "black";
+//   dialogMessage.style.marginLeft = "13px";
+//   dialogMessage.style.marginRight = "13px";
+//   dialogMessage.style.lineHeight = "1.5";
+//   dialogMessage.style.textAlign = "justify";
+//   dialogMessage.style.marginBottom = "20px";
+//   dialogBox.appendChild(dialogMessage);
 
 
-  // Container for fine print, dots, and arrow button
-  const dialogFooter = document.createElement("div");
-  dialogFooter.style.display = "flex";
-  dialogFooter.style.justifyContent = "space-between";
-  dialogFooter.style.alignItems = "center";
-  dialogFooter.style.marginTop = "20px";
+//   // Container for fine print, dots, and arrow button
+//   const dialogFooter = document.createElement("div");
+//   dialogFooter.style.display = "flex";
+//   dialogFooter.style.justifyContent = "space-between";
+//   dialogFooter.style.alignItems = "center";
+//   dialogFooter.style.marginTop = "20px";
 
-  // Fine print
-  const finePrint = document.createElement("p");
-  finePrint.textContent =
-    "For the best performance, use this app on a desktop. While it may work on mobile devices, some features are optimized for larger screens and keyboard/mouse interactions. Outcomes should not be considered definitive endorsements or rejections of any rail project.";
-  finePrint.style.fontSize = "8px";
-  finePrint.style.color = "grey";
-  finePrint.style.lineHeight = "1.5";
-  finePrint.style.textAlign = "left";
-  finePrint.style.marginLeft = "13px";
-  finePrint.style.maxWidth = "66%"; // Set max width to 2/3 of the container
-  dialogFooter.appendChild(finePrint);
+//   // Fine print
+//   const finePrint = document.createElement("p");
+//   finePrint.textContent =
+//     "For the best performance, use this app on a desktop. While it may work on mobile devices, some features are optimized for larger screens and keyboard/mouse interactions. Outcomes should not be considered definitive endorsements or rejections of any rail project.";
+//   finePrint.style.fontSize = "8px";
+//   finePrint.style.color = "grey";
+//   finePrint.style.lineHeight = "1.5";
+//   finePrint.style.textAlign = "left";
+//   finePrint.style.marginLeft = "13px";
+//   finePrint.style.maxWidth = "66%"; // Set max width to 2/3 of the container
+//   dialogFooter.appendChild(finePrint);
 
-  // Dots for page indicator
-  const pageIndicator = document.createElement("div");
-  pageIndicator.style.display = "flex";
-  pageIndicator.style.justifyContent = "left";
-  pageIndicator.style.alignItems = "center";
-  pageIndicator.style.gap = "7px";
-  pageIndicator.style.marginTop = "25px";
-  pageIndicator.style.marginLeft = "12px";
+//   // Dots for page indicator
+//   const pageIndicator = document.createElement("div");
+//   pageIndicator.style.display = "flex";
+//   pageIndicator.style.justifyContent = "left";
+//   pageIndicator.style.alignItems = "center";
+//   pageIndicator.style.gap = "7px";
+//   pageIndicator.style.marginTop = "25px";
+//   pageIndicator.style.marginLeft = "12px";
 
-  const dots = [];
-  for (let i = 0; i < 3; i++) {
-    const dot = document.createElement("div");
-    dot.style.width = "6px";
-    dot.style.height = "6px";
-    dot.style.borderRadius = "50%";
-    dot.style.backgroundColor = i === 0 ? "orange" : "lightgrey"; // Highlight the first dot
-    dots.push(dot);
-    pageIndicator.appendChild(dot);
-  }
-  dialogBox.appendChild(pageIndicator);
+//   const dots = [];
+//   for (let i = 0; i < 3; i++) {
+//     const dot = document.createElement("div");
+//     dot.style.width = "6px";
+//     dot.style.height = "6px";
+//     dot.style.borderRadius = "50%";
+//     dot.style.backgroundColor = i === 0 ? "orange" : "lightgrey"; // Highlight the first dot
+//     dots.push(dot);
+//     pageIndicator.appendChild(dot);
+//   }
+//   dialogBox.appendChild(pageIndicator);
 
-  // Back button
-  const backButton = document.createElement("img");
-  backButton.src = "images/arrow.svg";
-  backButton.style.transform = "rotate(180deg)";
-  backButton.alt = "Previous Page";
-  backButton.style.padding = "10px";
-  backButton.style.border = "none";
-  backButton.style.borderRadius = "50%";
-  backButton.style.backgroundColor = "lightgrey";
-  backButton.style.marginBottom = "10px";
-  backButton.style.marginLeft = "10px";
-  backButton.style.opacity = 1;
-  backButton.style.cursor = "pointer";
-  backButton.style.width = "40px";
-  backButton.style.height = "40px";
-  dialogFooter.appendChild(backButton);
+//   // Back button
+//   const backButton = document.createElement("img");
+//   backButton.src = "images/arrow.svg";
+//   backButton.style.transform = "rotate(180deg)";
+//   backButton.alt = "Previous Page";
+//   backButton.style.padding = "10px";
+//   backButton.style.border = "none";
+//   backButton.style.borderRadius = "50%";
+//   backButton.style.backgroundColor = "lightgrey";
+//   backButton.style.marginBottom = "10px";
+//   backButton.style.marginLeft = "10px";
+//   backButton.style.opacity = 1;
+//   backButton.style.cursor = "pointer";
+//   backButton.style.width = "40px";
+//   backButton.style.height = "40px";
+//   dialogFooter.appendChild(backButton);
 
-  // Arrow button
-  const okButton = document.createElement("img");
-  okButton.src = "images/arrow.svg";
-  okButton.alt = "Next Page";
-  okButton.style.padding = "15px";
-  okButton.style.border = "none";
-  okButton.style.borderRadius = "50%";
-  okButton.style.backgroundColor = "orange";
-  okButton.style.marginBottom = "10px";
-  okButton.style.marginRight = "10px";
-  okButton.style.opacity = 1;
-  okButton.style.cursor = "pointer";
-  okButton.style.width = "60px";
-  okButton.style.height = "60px";
-  dialogFooter.appendChild(okButton);
+//   // Arrow button
+//   const okButton = document.createElement("img");
+//   okButton.src = "images/arrow.svg";
+//   okButton.alt = "Next Page";
+//   okButton.style.padding = "15px";
+//   okButton.style.border = "none";
+//   okButton.style.borderRadius = "50%";
+//   okButton.style.backgroundColor = "orange";
+//   okButton.style.marginBottom = "10px";
+//   okButton.style.marginRight = "10px";
+//   okButton.style.opacity = 1;
+//   okButton.style.cursor = "pointer";
+//   okButton.style.width = "60px";
+//   okButton.style.height = "60px";
+//   dialogFooter.appendChild(okButton);
 
-  dialogBox.appendChild(dialogFooter);
+//   dialogBox.appendChild(dialogFooter);
 
-  dialogContainer.appendChild(dialogBox);
-  document.body.appendChild(dialogContainer);
+//   dialogContainer.appendChild(dialogBox);
+//   document.body.appendChild(dialogContainer);
 
-  // Back button functionality
-  backButton.addEventListener("click", () => {
-    if (currentPage === 2) {
-      // Define page1Content to go back to page 1
-      const page1Content = () => {
-        dialogTitle.textContent = "Trains, Lanes, and Data Grains!";
-        dialogsubTitle.textContent = "Mapping Southeast Asia's Future";
-        dialogMessage.innerHTML =
-          "Welcome to the Rail Feasibility Mapper!<br>This tool allows you to explore and evaluate rail feasibility based on various indexes and criteria specific to Southeast Asia.<br><br>Using the tools provided, you can pinpoint an origin-destination pair, calculate said routes, toggle layer visibility, control level of influence of the indexes and analyze the feasibility of your connectivity project in the final result.<br><br>Let's map the future of Southeast Asia together!";
-        okButton.alt = "Next Page";
+//   // Back button functionality
+//   backButton.addEventListener("click", () => {
+//     if (currentPage === 2) {
+//       // Define page1Content to go back to page 1
+//       const page1Content = () => {
+//         dialogTitle.textContent = "Trains, Lanes, and Data Grains!";
+//         dialogsubTitle.textContent = "Mapping Southeast Asia's Future";
+//         dialogMessage.innerHTML =
+//           "Welcome to the Rail Feasibility Mapper!<br>This tool allows you to explore and evaluate rail feasibility based on various indexes and criteria specific to Southeast Asia.<br><br>Using the tools provided, you can pinpoint an origin-destination pair, calculate said routes, toggle layer visibility, control level of influence of the indexes and analyze the feasibility of your connectivity project in the final result.<br><br>Let's map the future of Southeast Asia together!";
+//         okButton.alt = "Next Page";
 
-        // Update dots
-        dots.forEach((dot, index) => {
-          dot.style.backgroundColor = index === 0 ? "orange" : "lightgrey";
-        });
+//         // Update dots
+//         dots.forEach((dot, index) => {
+//           dot.style.backgroundColor = index === 0 ? "orange" : "lightgrey";
+//         });
 
-        // back button grey page 1
-        backButton.style.backgroundColor = "lightgrey";
-      };
+//         // back button grey page 1
+//         backButton.style.backgroundColor = "lightgrey";
+//       };
 
-      page1Content();
-      currentPage--;
-    } else if (currentPage === 3) {
-      page2Content();
-      currentPage--;
-    }
-  });
+//       page1Content();
+//       currentPage--;
+//     } else if (currentPage === 3) {
+//       page2Content();
+//       currentPage--;
+//     }
+//   });
 
-  // Page 2
-  const page2Content = () => {
-    dialogTitle.textContent = "Explore Criteria of Feasibility";
-    dialogsubTitle.textContent = "Move the Cursor Over Each Icon to Reveal the Criteria.";
+//   // Page 2
+//   const page2Content = () => {
+//     dialogTitle.textContent = "Explore Criteria of Feasibility";
+//     dialogsubTitle.textContent = "Move the Cursor Over Each Icon to Reveal the Criteria.";
     
-    // Scale factor based on dialog width
-    const containerWidth = dialogBox.clientWidth;
-    const scale = Math.min(1, containerWidth / 520); // Scale relative to the design width
+//     // Scale factor based on dialog width
+//     const containerWidth = dialogBox.clientWidth;
+//     const scale = Math.min(1, containerWidth / 520); // Scale relative to the design width
     
-    // Container for icons with scaling
-    const iconContainer = document.createElement("div");
-    iconContainer.style.transform = `scale(${scale})`;
-    iconContainer.style.transformOrigin = "center center";
-    iconContainer.style.margin = "20px auto";
-    iconContainer.style.width = "100%";
+//     // Container for icons with scaling
+//     const iconContainer = document.createElement("div");
+//     iconContainer.style.transform = `scale(${scale})`;
+//     iconContainer.style.transformOrigin = "center center";
+//     iconContainer.style.margin = "20px auto";
+//     iconContainer.style.width = "100%";
     
-    iconContainer.innerHTML = `
-      <style>
-        @media (max-width: 768px) {
-          .icons-grid-container {
-            transform: scale(1.3);
-            transform-origin: center center;
-            margin: 0 auto;
-            width: 100% !important;
-            justify-content: center !important;
-            margin-top: 0 !important;
-            margin-bottom: 0 !important;
-          }
-        }
-      </style>
-      <div class="icons-grid-container" style="display: flex; justify-content: space-between; gap: 10px; margin-top: 50px; margin-bottom: 50px;">
-        <div style="display: flex; flex-direction: column; gap: 44px;">
-          <div class="floating-icon" style="width: 60px; height: 60px; border-radius: 50%; background-color: #6dbefe; display: flex; justify-content: center; align-items: center;">
-            <img src="images/tsunami.svg" alt="Tsunami" style="width: 30px; height: 30px;">
-          </div>
-          <div class="floating-icon" style="width: 60px; height: 60px; border-radius: 50%; background-color: #f67a0a; display: flex; justify-content: center; align-items: center;">
-            <img src="images/quake.svg" alt="Earthquake" style="width: 30px; height: 30px;">
-          </div>
-        </div>
-        <div style="display: flex; flex-direction: column; gap: 34px;">
-          <div class="floating-icon2" style="width: 60px; height: 60px; border-radius: 50%; background-color: #4181f2; display: flex; justify-content: center; align-items: center;">
-            <img src="images/coast.svg" alt="Coastline" style="width: 30px; height: 30px;">
-          </div>
-          <div class="floating-icon" style="width: 60px; height: 60px; border-radius: 50%; background-color: #00be9d; display: flex; justify-content: center; align-items: center;">
-            <img src="images/humidity.svg" alt="Humidity" style="width: 30px; height: 30px;">
-          </div>
-        </div>
-        <div style="display: flex; flex-direction: column; gap: 42px;">
-          <div class="floating-icon" style="width: 60px; height: 60px; border-radius: 50%; background-color: #268723; display: flex; justify-content: center; align-items: center;">
-            <img src="images/tree.svg" alt="Forest" style="width: 30px; height: 30px;">
-          </div>
-          <div class="floating-icon2" style="width: 60px; height: 60px; border-radius: 50%; background-color: #cbaa2f; display: flex; justify-content: center; align-items: center;">
-            <img src="images/amphibians.svg" alt="Amphibians" style="width: 30px; height: 30px;">
-          </div>
-        </div>
-        <div style="display: flex; flex-direction: column; gap: 22px;">
-          <div class="floating-icon2" style="width: 60px; height: 60px; border-radius: 50%; background-color: #ff6056; display: flex; justify-content: center; align-items: center;">
-            <img src="images/bird.svg" alt="Birds" style="width: 30px; height: 30px;">
-          </div>
-          <div class="floating-icon2" style="width: 60px; height: 60px; border-radius: 50%; background-color: #840079; display: flex; justify-content: center; align-items: center;">
-            <img src="images/mammals.svg" alt="Mammals" style="width: 30px; height: 30px;">
-          </div>
-        </div>
-        <div style="display: flex; flex-direction: column; gap: 40px;">
-          <div class="floating-icon2" style="width: 60px; height: 60px; border-radius: 50%; background-color: #d2e531; display: flex; justify-content: center; align-items: center;">
-            <img src="images/population2.svg" alt="Spatial Population" style="width: 30px; height: 30px; filter: invert(100%);">
-          </div>
-          <div class="floating-icon" style="width: 60px; height: 60px; border-radius: 50%; 
-          background-color: #ffb972; display: flex; justify-content: center; align-items: center;">
-            <img src="images/gdp.svg" alt="Spatial GDP" style="width: 30px; height: 30px; filter: invert(100%);">
-          </div>
-        </div>
-      </div>
-    `;
+//     iconContainer.innerHTML = `
+//       <style>
+//         @media (max-width: 768px) {
+//           .icons-grid-container {
+//             transform: scale(1.3);
+//             transform-origin: center center;
+//             margin: 0 auto;
+//             width: 100% !important;
+//             justify-content: center !important;
+//             margin-top: 0 !important;
+//             margin-bottom: 0 !important;
+//           }
+//         }
+//       </style>
+//       <div class="icons-grid-container" style="display: flex; justify-content: space-between; gap: 10px; margin-top: 50px; margin-bottom: 50px;">
+//         <div style="display: flex; flex-direction: column; gap: 44px;">
+//           <div class="floating-icon" style="width: 60px; height: 60px; border-radius: 50%; background-color: #6dbefe; display: flex; justify-content: center; align-items: center;">
+//             <img src="images/tsunami.svg" alt="Tsunami" style="width: 30px; height: 30px;">
+//           </div>
+//           <div class="floating-icon" style="width: 60px; height: 60px; border-radius: 50%; background-color: #f67a0a; display: flex; justify-content: center; align-items: center;">
+//             <img src="images/quake.svg" alt="Earthquake" style="width: 30px; height: 30px;">
+//           </div>
+//         </div>
+//         <div style="display: flex; flex-direction: column; gap: 34px;">
+//           <div class="floating-icon2" style="width: 60px; height: 60px; border-radius: 50%; background-color: #4181f2; display: flex; justify-content: center; align-items: center;">
+//             <img src="images/coast.svg" alt="Coastline" style="width: 30px; height: 30px;">
+//           </div>
+//           <div class="floating-icon" style="width: 60px; height: 60px; border-radius: 50%; background-color: #00be9d; display: flex; justify-content: center; align-items: center;">
+//             <img src="images/humidity.svg" alt="Humidity" style="width: 30px; height: 30px;">
+//           </div>
+//         </div>
+//         <div style="display: flex; flex-direction: column; gap: 42px;">
+//           <div class="floating-icon" style="width: 60px; height: 60px; border-radius: 50%; background-color: #268723; display: flex; justify-content: center; align-items: center;">
+//             <img src="images/tree.svg" alt="Forest" style="width: 30px; height: 30px;">
+//           </div>
+//           <div class="floating-icon2" style="width: 60px; height: 60px; border-radius: 50%; background-color: #cbaa2f; display: flex; justify-content: center; align-items: center;">
+//             <img src="images/amphibians.svg" alt="Amphibians" style="width: 30px; height: 30px;">
+//           </div>
+//         </div>
+//         <div style="display: flex; flex-direction: column; gap: 22px;">
+//           <div class="floating-icon2" style="width: 60px; height: 60px; border-radius: 50%; background-color: #ff6056; display: flex; justify-content: center; align-items: center;">
+//             <img src="images/bird.svg" alt="Birds" style="width: 30px; height: 30px;">
+//           </div>
+//           <div class="floating-icon2" style="width: 60px; height: 60px; border-radius: 50%; background-color: #840079; display: flex; justify-content: center; align-items: center;">
+//             <img src="images/mammals.svg" alt="Mammals" style="width: 30px; height: 30px;">
+//           </div>
+//         </div>
+//         <div style="display: flex; flex-direction: column; gap: 40px;">
+//           <div class="floating-icon2" style="width: 60px; height: 60px; border-radius: 50%; background-color: #d2e531; display: flex; justify-content: center; align-items: center;">
+//             <img src="images/population2.svg" alt="Spatial Population" style="width: 30px; height: 30px; filter: invert(100%);">
+//           </div>
+//           <div class="floating-icon" style="width: 60px; height: 60px; border-radius: 50%; 
+//           background-color: #ffb972; display: flex; justify-content: center; align-items: center;">
+//             <img src="images/gdp.svg" alt="Spatial GDP" style="width: 30px; height: 30px; filter: invert(100%);">
+//           </div>
+//         </div>
+//       </div>
+//     `;
     
-    dialogMessage.innerHTML = '';
-    dialogMessage.appendChild(iconContainer);
+//     dialogMessage.innerHTML = '';
+//     dialogMessage.appendChild(iconContainer);
 
-    // Hover descriptions for each icon
-    const icons = [
-      { selector: "img[alt='Tsunami']", description: "Historical Tsunamis" },
-      {
-        selector: "img[alt='Earthquake']",
-        description: "Historical Earthquakes",
-      },
-      { selector: "img[alt='Coastline']", description: "Coastline Proximity" },
-      { selector: "img[alt='Humidity']", description: "Humidity Levels" },
-      { selector: "img[alt='Forest']", description: "Forest Coverage" },
-      { selector: "img[alt='Amphibians']", description: "Amphibians Presence" },
-      { selector: "img[alt='Birds']", description: "Birds Presence" },
-      { selector: "img[alt='Mammals']", description: "Mammals Presence" },
-      {
-        selector: "img[alt='Spatial Population']",
-        description: "Spatial Population Density",
-      },
-      {
-        selector: "img[alt='Spatial GDP']",
-        description: "Spatial GDP Per Capita PPP",
-      },
-    ];
+//     // Hover descriptions for each icon
+//     const icons = [
+//       { selector: "img[alt='Tsunami']", description: "Historical Tsunamis" },
+//       {
+//         selector: "img[alt='Earthquake']",
+//         description: "Historical Earthquakes",
+//       },
+//       { selector: "img[alt='Coastline']", description: "Coastline Proximity" },
+//       { selector: "img[alt='Humidity']", description: "Humidity Levels" },
+//       { selector: "img[alt='Forest']", description: "Forest Coverage" },
+//       { selector: "img[alt='Amphibians']", description: "Amphibians Presence" },
+//       { selector: "img[alt='Birds']", description: "Birds Presence" },
+//       { selector: "img[alt='Mammals']", description: "Mammals Presence" },
+//       {
+//         selector: "img[alt='Spatial Population']",
+//         description: "Spatial Population Density",
+//       },
+//       {
+//         selector: "img[alt='Spatial GDP']",
+//         description: "Spatial GDP Per Capita PPP",
+//       },
+//     ];
 
-    let hoverEnabled = true;
+//     let hoverEnabled = true;
 
-    icons.forEach(({ selector, description }) => {
-      const iconElements = document.querySelectorAll(selector);
-      iconElements.forEach((icon) => {
-        const hoverDescription = d3
-          .select("body")
-          .append("div")
-          .style("position", "absolute")
-          .style("padding", "7px")
-          .style("background-color", "white")
-          .style("border", "0px solid #ccc")
-          .style("border-radius", "20px")
-          .style("box-shadow", "0px 2px 5px rgba(0, 0, 0, 0.2)")
-          .style("font-size", "14px")
-          .style("z-index", "2003")
-          .style("color", "#333")
-          .style("display", "none")
-          .text(description);
+//     icons.forEach(({ selector, description }) => {
+//       const iconElements = document.querySelectorAll(selector);
+//       iconElements.forEach((icon) => {
+//         const hoverDescription = d3
+//           .select("body")
+//           .append("div")
+//           .style("position", "absolute")
+//           .style("padding", "7px")
+//           .style("background-color", "white")
+//           .style("border", "0px solid #ccc")
+//           .style("border-radius", "20px")
+//           .style("box-shadow", "0px 2px 5px rgba(0, 0, 0, 0.2)")
+//           .style("font-size", "14px")
+//           .style("z-index", "2003")
+//           .style("color", "#333")
+//           .style("display", "none")
+//           .text(description);
 
-        icon.addEventListener("mouseover", (event) => {
-          if (hoverEnabled) {
-            hoverDescription
-              .style("left", `${event.pageX + 10}px`)
-              .style("top", `${event.pageY + 10}px`)
-              .style("display", "block");
-          }
-        });
+//         icon.addEventListener("mouseover", (event) => {
+//           if (hoverEnabled) {
+//             hoverDescription
+//               .style("left", `${event.pageX + 10}px`)
+//               .style("top", `${event.pageY + 10}px`)
+//               .style("display", "block");
+//           }
+//         });
 
-        icon.addEventListener("mouseout", () => {
-          hoverDescription.style("display", "none");
-        });
-      });
-    });
+//         icon.addEventListener("mouseout", () => {
+//           hoverDescription.style("display", "none");
+//         });
+//       });
+//     });
 
-    // dialog hover descriptions after closing the dialog
-    okButton.addEventListener("click", () => {
-      if (currentPage === 3) {
-        hoverEnabled = false;
-      }
-    });
-    okButton.alt = "Next Page";
+//     // dialog hover descriptions after closing the dialog
+//     okButton.addEventListener("click", () => {
+//       if (currentPage === 3) {
+//         hoverEnabled = false;
+//       }
+//     });
+//     okButton.alt = "Next Page";
 
-    // Update dots
-    dots.forEach((dot, index) => {
-      dot.style.backgroundColor = index === 1 ? "orange" : "lightgrey";
-    });
+//     // Update dots
+//     dots.forEach((dot, index) => {
+//       dot.style.backgroundColor = index === 1 ? "orange" : "lightgrey";
+//     });
 
-    // back button orange page 2
-    backButton.style.backgroundColor = "orange";
-  };
+//     // back button orange page 2
+//     backButton.style.backgroundColor = "orange";
+//   };
 
-  // Page 3
-  const page3Content = () => {
-    dialogTitle.textContent = "Plot the Route!";
-    dialogsubTitle.textContent = "Your Journey Begins Here.";
+//   // Page 3
+//   const page3Content = () => {
+//     dialogTitle.textContent = "Plot the Route!";
+//     dialogsubTitle.textContent = "Your Journey Begins Here.";
     
-    // Scale factor based on dialog width
-    const containerWidth = dialogBox.clientWidth;
-    const scale = Math.min(1, containerWidth / 520); // Scale relative to the design width
+//     // Scale factor based on dialog width
+//     const containerWidth = dialogBox.clientWidth;
+//     const scale = Math.min(1, containerWidth / 520); // Scale relative to the design width
     
-    // Container for tutorial images with scaling
-    const tutorialContainer = document.createElement("div");
-    tutorialContainer.style.transform = `scale(${scale})`;
-    tutorialContainer.style.transformOrigin = "center center";
-    tutorialContainer.style.margin = "20px auto";
-    tutorialContainer.style.width = "100%";
+//     // Container for tutorial images with scaling
+//     const tutorialContainer = document.createElement("div");
+//     tutorialContainer.style.transform = `scale(${scale})`;
+//     tutorialContainer.style.transformOrigin = "center center";
+//     tutorialContainer.style.margin = "20px auto";
+//     tutorialContainer.style.width = "100%";
     
-    tutorialContainer.innerHTML = `
-      <style>
-      @media (max-width: 768px) {
-        .tutorial-container {
-        transform: scale(1.2);
-        transform-origin: center top;
-        margin-bottom: 20px;
-        }
-      }
-      </style>
-      <div class="tutorial-container" style="display: flex; justify-content: center; align-items: center; gap: 30px; margin-top: 47px; margin-bottom: 47px;">
-      <div style="display: flex; flex-direction: column; align-items: center; flex: 1;">
-      <div class="floating-icon2" style="width: 110px; height: 110px; border-radius: 50%; display: flex; justify-content: center; align-items: center;">
-      <img src="images/tut_location.svg" alt="Location Tutorial" style="width: 110px; height: 110px;">
-      </div>
-      <p style="font-size: 12px; color: #333; text-align: center; margin-top: 30px;">Set Origin-Destination</p>
-      </div>
-      <div style="display: flex; flex-direction: column; align-items: center; flex: 1;">
-      <div class="floating-icon2" style="width: 110px; height: 110px; border-radius: 50%; display: flex; justify-content: center; align-items: center;">
-      <img src="images/tut_draw.svg" alt="Draw Tutorial" style="width: 110px; height: 110px;">
-      </div>
-      <p style="font-size: 12px; color: #333; text-align: center; margin-top: 30px;">Calculate the Route</p>
-      </div>
-      <div style="display: flex; flex-direction: column; align-items: center; flex: 1;">
-      <div class="floating-icon" style="width: 110px; height: 110px; border-radius: 50%; display: flex; justify-content: center; align-items: center;">
-      <img src="images/tut_export.svg" alt="Export Tutorial" style="width: 110px; height: 110px;">
-      </div>
-      <p style="font-size: 12px; color: #333; text-align: center; margin-top: 30px;">Export the results!</p>
-      </div>
-      </div>
-    `;
+//     tutorialContainer.innerHTML = `
+//       <style>
+//       @media (max-width: 768px) {
+//         .tutorial-container {
+//         transform: scale(1.2);
+//         transform-origin: center top;
+//         margin-bottom: 20px;
+//         }
+//       }
+//       </style>
+//       <div class="tutorial-container" style="display: flex; justify-content: center; align-items: center; gap: 30px; margin-top: 47px; margin-bottom: 47px;">
+//       <div style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+//       <div class="floating-icon2" style="width: 110px; height: 110px; border-radius: 50%; display: flex; justify-content: center; align-items: center;">
+//       <img src="images/tut_location.svg" alt="Location Tutorial" style="width: 110px; height: 110px;">
+//       </div>
+//       <p style="font-size: 12px; color: #333; text-align: center; margin-top: 30px;">Set Origin-Destination</p>
+//       </div>
+//       <div style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+//       <div class="floating-icon2" style="width: 110px; height: 110px; border-radius: 50%; display: flex; justify-content: center; align-items: center;">
+//       <img src="images/tut_draw.svg" alt="Draw Tutorial" style="width: 110px; height: 110px;">
+//       </div>
+//       <p style="font-size: 12px; color: #333; text-align: center; margin-top: 30px;">Calculate the Route</p>
+//       </div>
+//       <div style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+//       <div class="floating-icon" style="width: 110px; height: 110px; border-radius: 50%; display: flex; justify-content: center; align-items: center;">
+//       <img src="images/tut_export.svg" alt="Export Tutorial" style="width: 110px; height: 110px;">
+//       </div>
+//       <p style="font-size: 12px; color: #333; text-align: center; margin-top: 30px;">Export the results!</p>
+//       </div>
+//       </div>
+//     `;
     
-    dialogMessage.innerHTML = '';
-    dialogMessage.appendChild(tutorialContainer);
+//     dialogMessage.innerHTML = '';
+//     dialogMessage.appendChild(tutorialContainer);
     
-    okButton.alt = "Let's Get to Work!";
+//     okButton.alt = "Let's Get to Work!";
 
-    // Update dots
-    dots.forEach((dot, index) => {
-      dot.style.backgroundColor = index === 2 ? "orange" : "lightgrey";
-    });
+//     // Update dots
+//     dots.forEach((dot, index) => {
+//       dot.style.backgroundColor = index === 2 ? "orange" : "lightgrey";
+//     });
 
-    // back button orange page 3
-    backButton.style.backgroundColor = "orange";
-  };
+//     // back button orange page 3
+//     backButton.style.backgroundColor = "orange";
+//   };
 
-  let currentPage = 1;
+//   let currentPage = 1;
 
-  okButton.addEventListener("click", () => {
-    if (currentPage === 1) {
-      page2Content();
-      currentPage++;
-    } else if (currentPage === 2) {
-      page3Content();
-      currentPage++;
-    } else {
-      document.body.removeChild(dialogContainer);
-    }
-  });
-});
+//   okButton.addEventListener("click", () => {
+//     if (currentPage === 1) {
+//       page2Content();
+//       currentPage++;
+//     } else if (currentPage === 2) {
+//       page3Content();
+//       currentPage++;
+//     } else {
+//       document.body.removeChild(dialogContainer);
+//     }
+//   });
+// });
 
 //index - tsi - data query + score
 
