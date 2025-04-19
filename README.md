@@ -1,6 +1,6 @@
 # Trains, Lanes, and Data Grains LITE
 ### Mapping Southeast Asia’s Future [Preview]([https://xuanx1.github.io/machineLearn-xuan
-/Project](https://machinelearn-xuan.github.io/Project/visualise/)
+/Project])
 
 ![final-cover](https://github.com/user-attachments/assets/f4fad89a-1a08-4884-9d4a-f6628cb2961d)
 ![final-mockup2](https://github.com/user-attachments/assets/b59795cc-c327-485a-bfa0-7c512e9a3635)
